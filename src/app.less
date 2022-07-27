@@ -1,0 +1,44 @@
+.calendar {
+  width: 375px;
+  height: 100vh;
+  .header {
+    display: flex;
+    .week {
+      flex: 1;
+      border: 1px solid #ccc;
+      text-align: center;
+      padding: 15px;
+    }
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.day-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  .day-item {
+    width: calc(100% / 7);
+    text-align: center;
+    cursor: pointer;
+    height: 40px;
+    // padding: 0 15px;
+    &.active {
+      background-color: rgb(252, 1, 26, 0.3);
+    }
+    &.rangeIn {
+      background-color: rgb(250, 189, 2, 0.1);
+    }
+    &.disabled {
+      color: #ccc;
+    }
+  }
+}
+
+.title-box {
+  display: flex;
+  // justify-content: ;
+  justify-content: space-between;
+}
